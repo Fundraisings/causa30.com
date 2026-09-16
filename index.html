@@ -95,16 +95,65 @@ Descubrir Causa30
 </div>
 <div class="fund-pulse-cta">Toca para conocerla</div>
 </section>
-<!-- PATROCINADOR OFICIAL DEL MES -->
+<!-- PINTA CON CAUSA — banner con flip -->
 <section style="padding-top:36px;padding-bottom:0;">
-<span class="eyebrow" style="text-align:center;display:block;">La siguiente empresa también se suma a la causa</span>
-<p class="sponsor-thanks">¿Tu marca también quiere apoyar una causa? Escríbenos: hola@causa30.com</p>
+<span class="eyebrow" style="text-align:center;display:block;">Pinta con causa30</span>
+<p class="sponsor-thanks">Porque ayudar es todo un arte 🎨🐾 — toca la imagen</p>
+
 <div class="banner-shadow">
-<div class="banner-link">
-<img src="images/banner-anunciate2.webp" alt="Anúnciate con Causa30">
-</div>
+  <div class="pcc-flip" id="pccFlip">
+    <div class="pcc-flip-inner">
+      <div class="pcc-flip-front">
+        <img src="images/pinta-con-causa-banner.png" alt="Pinta Con Causa30">
+      </div>
+      <div class="pcc-flip-back">
+        <img src="images/21-dias-portada.png" alt="21 Días, Dos Generaciones — portada del libro">
+        <div class="pcc-back-info">
+          <div class="pcc-back-title">21 Días, Dos Generaciones</div>
+          <div class="pcc-back-sub">Un legado de principios para vivir en familia</div>
+          <a href="TU_LINK_DE_PAYHIP_AQUI" target="_blank" rel="noopener" class="pcc-buy-btn">Clic aquí para comprar →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
+
+<style>
+.pcc-flip{
+  position:relative;width:100%;aspect-ratio:1200/300; /* ajusta esto a la proporción real de tu banner */
+  perspective:1200px;cursor:pointer;border-radius:20px;
+}
+.pcc-flip-inner{
+  position:relative;width:100%;height:100%;
+  transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.2,.2,1);
+}
+.pcc-flip.flipped .pcc-flip-inner{transform:rotateY(180deg);}
+.pcc-flip-front,.pcc-flip-back{
+  position:absolute;inset:0;backface-visibility:hidden;border-radius:20px;overflow:hidden;
+}
+.pcc-flip-front img{width:100%;height:100%;object-fit:cover;display:block;}
+.pcc-flip-back{
+  transform:rotateY(180deg);
+  background:var(--verde-deep);color:#fff;
+  display:flex;align-items:center;gap:16px;padding:18px;
+}
+.pcc-flip-back img{width:90px;height:auto;border-radius:8px;flex-shrink:0;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);}
+.pcc-back-info{flex:1;}
+.pcc-back-title{font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;}
+.pcc-back-sub{font-size:11.5px;color:#C7D6CE;margin-top:4px;line-height:1.4;}
+.pcc-buy-btn{
+  display:inline-block;margin-top:10px;background:var(--coral);color:#fff;
+  font-weight:800;font-size:12.5px;padding:9px 16px;border-radius:100px;
+}
+</style>
+
+<script>
+document.getElementById('pccFlip').addEventListener('click', function(e){
+  if(e.target.closest('.pcc-buy-btn')) return; // no gira de vuelta al tocar el botón
+  this.classList.toggle('flipped');
+});
+</script>
 
 
 <!-- RECUERDA CÓMO PARTICIPAR -->
