@@ -117,7 +117,60 @@ Descubrir Causa30
     </div>
   </div>
 </div>
+
+<div class="pcc-divider-bar">
+  El arte y la creatividad ayudan a los niños a desarrollar empatía e inteligencia emocional — aprender a cuidar a los animales desde pequeños es una forma natural de extender ese mismo cuidado hacia los demás.
+</div>
+
 </section>
+
+<style>
+.pcc-flip{
+  position:relative;width:100%;aspect-ratio:1000/1320;
+  perspective:1200px;cursor:pointer;border-radius:20px;
+}
+.pcc-flip-inner{
+  position:relative;width:100%;height:100%;
+  transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.2,.2,1);
+}
+.pcc-flip.flipped .pcc-flip-inner{transform:rotateY(180deg);}
+.pcc-flip-front,.pcc-flip-back{
+  position:absolute;inset:0;backface-visibility:hidden;border-radius:20px;overflow:hidden;
+}
+.pcc-flip-front img{width:100%;height:100%;object-fit:cover;display:block;}
+.pcc-flip-back{
+  transform:rotateY(180deg);
+  background:var(--verde-deep);color:#fff;
+  display:flex;align-items:center;gap:16px;padding:18px;
+}
+.pcc-flip-back img{width:90px;height:auto;border-radius:8px;flex-shrink:0;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);}
+.pcc-back-info{flex:1;}
+.pcc-back-title{font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;}
+.pcc-back-sub{font-size:11.5px;color:#C7D6CE;margin-top:4px;line-height:1.4;}
+.pcc-buy-btn{
+  display:inline-block;margin-top:10px;background:var(--coral);color:#fff;
+  font-weight:800;font-size:12.5px;padding:9px 16px;border-radius:100px;
+}
+.pcc-divider-bar{
+  margin-top:18px;
+  background:var(--coral);
+  color:#fff;
+  border-radius:16px;
+  padding:16px 20px;
+  font-size:13px;
+  line-height:1.55;
+  text-align:center;
+  font-weight:600;
+  box-shadow:0 10px 22px -10px rgba(232,102,74,.5);
+}
+</style>
+
+<script>
+document.getElementById('pccFlip').addEventListener('click', function(e){
+  if(e.target.closest('.pcc-buy-btn')) return;
+  this.classList.toggle('flipped');
+});
+</script>
 
 <style>
 .pcc-flip{
