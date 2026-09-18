@@ -9,14 +9,14 @@
 <style>
   :root{
     --green:#12332A;
-    --green-deep:#0c261f;
-    --green-mid:#1b4a3d;
-    --coral:#F0A190;
-    --coral-deep:#e2816e;
-    --cream:#FBF7F1;
-    --cream-2:#F2EBDD;
-    --ink:#1c2620;
-    --ink-soft:#4d5850;
+    --green-deep:#0D251F;
+    --green-mid:#1A4538;
+    --coral:#E8664A;
+    --coral-deep:#C94F36;
+    --cream:#F8F5EF;
+    --cream-2:#F8F5EF;
+    --ink:#1B231F;
+    --ink-soft:#6B756F;
   }
   *{box-sizing:border-box;}
   body{
@@ -34,19 +34,27 @@
 
   /* ---------- SECTION 1: HERO ---------- */
   .hero{
-    background:radial-gradient(circle at 30% 20%, var(--green-mid) 0%, var(--green) 45%, var(--green-deep) 100%);
+    position:relative;
+    background:radial-gradient(ellipse at top, var(--green-mid) 0%, var(--green) 55%, var(--green-deep) 100%);
     color:#fff;
     text-align:center;
     padding:56px 24px 64px 24px;
   }
-  .hero .logo{
-    font-family:'Manrope',sans-serif;
-    font-weight:800;
-    font-size:20px;
-    letter-spacing:1px;
-    margin-bottom:36px;
+  .back-link{
+    position:absolute;
+    top:18px;left:18px;
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;font-weight:600;
+    color:rgba(255,255,255,0.75);
+    background:rgba(255,255,255,0.1);
+    padding:7px 14px 7px 10px;
+    border-radius:100px;
+    text-decoration:none;
   }
-  .hero .logo span{color:var(--coral);}
+  .hero .logo-img{
+    height:34px;
+    margin:0 auto 36px auto;
+  }
   .hero h1{
     font-size:32px;
     line-height:1.28;
@@ -55,6 +63,61 @@
     margin:0 auto 18px auto;
   }
   .hero h1 em{color:var(--coral);font-style:normal;}
+
+  .sr-only{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  }
+  /* ---------- FRANJA DE SELLO ANIMADO ---------- */
+  .stamp-band{
+    background:#0a0a0a;
+    width:100vw;
+    position:relative;
+    left:50%;right:50%;
+    margin:14px -50vw 22px -50vw;
+    padding:36px 20px;
+    overflow:hidden;
+  }
+  .stamp-wrap{
+    position:relative;
+    height:100px;
+    max-width:360px;
+    margin:0 auto;
+  }
+  .stamp-line{
+    position:absolute;
+    top:50%;left:50%;
+    width:100%;
+    padding:0 10px;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:25px;
+    line-height:1.25;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+  }
+  .stamp-line.line2{color:var(--coral);}
+  .stamp-line.line1{animation:stampCycle1 6s ease-in-out infinite;}
+  .stamp-line.line2{animation:stampCycle2 6s ease-in-out infinite;}
+  @keyframes stampCycle1{
+    0%{opacity:0;transform:translate(-50%,-50%) scale(2.3) rotate(-14deg);}
+    8%{opacity:1;transform:translate(-50%,-50%) scale(0.93) rotate(4deg);}
+    13%,42%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-1deg);}
+    50%{opacity:0;transform:translate(-50%,-50%) scale(0.85) rotate(-6deg);}
+    100%{opacity:0;transform:translate(-50%,-50%) scale(0.85) rotate(-6deg);}
+  }
+  @keyframes stampCycle2{
+    0%,50%{opacity:0;transform:translate(-50%,-50%) scale(2.3) rotate(14deg);}
+    58%{opacity:1;transform:translate(-50%,-50%) scale(0.93) rotate(-4deg);}
+    63%,92%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(1deg);}
+    100%{opacity:0;transform:translate(-50%,-50%) scale(0.85) rotate(6deg);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .stamp-line{animation:none;}
+    .stamp-line.line1{opacity:1;transform:translate(-50%,-50%);}
+    .stamp-line.line2{display:none;}
+  }
   .hero .slogan{
     font-family:'Caveat',cursive;
     font-size:22px;
@@ -105,27 +168,36 @@
   /* ---------- SECTION 4: LOS 4 ARTÍCULOS (formato catálogo) ---------- */
   .kit{background:var(--cream-2);padding:8px 24px 52px 24px;}
   .kit-row{
+    position:relative;
+    margin-bottom:22px;
+  }
+  .kit-row::before{
+    content:'';position:absolute;
+    left:-5px;right:11px;top:5px;bottom:-6px;
+    background:var(--coral);border-radius:18px;
+    transform:rotate(-2.5deg);z-index:0;
+  }
+  .kit-row.reverse::before{transform:rotate(2.5deg);}
+  .kit-row-inner{
+    position:relative;z-index:1;
     display:flex;
     gap:16px;
     align-items:flex-start;
-    background:#fff;
+    background:var(--card, #fff);
     border-radius:16px;
     padding:14px;
-    margin-bottom:16px;
-    box-shadow:14px 20px 30px -8px rgba(201,96,62,0.48), 6px 10px 14px -4px rgba(201,96,62,0.3);
   }
-  .kit-row.reverse{flex-direction:row-reverse;}
+  .kit-row.reverse .kit-row-inner{flex-direction:row-reverse;}
   .kit-row-media{
     flex:0 0 108px;
     width:108px;
     aspect-ratio:1000/1320;
-    border-radius:10px;
-    overflow:hidden;
-    background:linear-gradient(135deg, var(--green-mid), var(--green));
-    display:flex;align-items:center;justify-content:center;
-    position:relative;
   }
-  .kit-row-media img{width:100%;height:100%;object-fit:cover;}
+  .kit-row-media img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--green-mid), var(--green));
+  }
   .kit-row-media .ph-icon{width:34px;height:34px;color:#fff;opacity:0.85;}
   .kit-row-body{flex:1;min-width:0;padding-top:2px;}
   .kit-row-tag{
@@ -170,7 +242,7 @@
 
   /* ---------- SECTION 6: CIERRE / CTA ---------- */
   .cta-section{
-    background:linear-gradient(180deg, var(--coral) 0%, var(--coral-deep) 100%);
+    background:linear-gradient(135deg, var(--coral) 0%, var(--coral-deep) 100%);
     color:#fff;
     text-align:center;
     padding:52px 24px 58px 24px;
@@ -229,9 +301,16 @@
 
 <!-- SECCIÓN 1: ENCABEZADO -->
 <section class="hero">
+  <a href="../" class="back-link">← Volver</a>
   <div class="wrap">
-    <div class="logo">CAUSA<span>30</span></div>
-    <h1>Siembra valores hoy. <em>Cosecha carácter</em> mañana.</h1>
+    <img src="../images/logo.png" alt="Causa30" class="logo-img">
+    <h1 class="sr-only">Siembra valores hoy. Cosecha carácter mañana.</h1>
+    <div class="stamp-band" aria-hidden="true">
+      <div class="stamp-wrap">
+        <span class="stamp-line line1">Siembra valores hoy.</span>
+        <span class="stamp-line line2">Cosecha carácter mañana.</span>
+      </div>
+    </div>
     <p class="hero-desc" style="max-width:380px;margin:0 auto;color:#cfd9d3;font-size:14.5px;">Un kit para enseñarle a tu hijo, a través de nuestra propia historia, quién quiere llegar a ser.</p>
     <div class="slogan">porque ayudar es todo un arte</div>
   </div>
@@ -261,50 +340,58 @@
   <div class="wrap">
 
     <div class="kit-row">
-      <div class="kit-row-media">
-        <img src="images/pconcausalibro.png" alt="Libro para colorear 21 Días, Dos Generaciones">
-      </div>
-      <div class="kit-row-body">
-        <span class="kit-row-tag">Recurso 01</span>
-        <h3>Libro para colorear "21 Días, Dos Generaciones"</h3>
-        <p>Un recorrido ilustrado por los personajes más relevantes de nuestra historia dominicana, junto a los valores que definieron su carácter.</p>
-        <span class="kit-chip">Incluido</span>
+      <div class="kit-row-inner">
+        <div class="kit-row-media">
+          <img src="images/pconcausalibro.png" alt="Libro para colorear 21 Días, Dos Generaciones">
+        </div>
+        <div class="kit-row-body">
+          <span class="kit-row-tag">Recurso 01</span>
+          <h3>Libro para colorear "21 Días, Dos Generaciones"</h3>
+          <p>Un recorrido ilustrado por los personajes más relevantes de nuestra historia dominicana, junto a los valores que definieron su carácter.</p>
+          <span class="kit-chip">Incluido</span>
+        </div>
       </div>
     </div>
 
     <div class="kit-row reverse">
-      <div class="kit-row-media" style="background:#fff;">
-        <img src="images/posterJPD.png" alt="Póster de Juan Pablo Duarte">
-      </div>
-      <div class="kit-row-body">
-        <span class="kit-row-tag">Recurso 02</span>
-        <h3>Póster coleccionable de Juan Pablo Duarte</h3>
-        <p>Una pieza visual de nuestro Padre de la Patria, con los 6 valores que rigieron su vida — inspiración diaria para el cuarto de tus hijos.</p>
-        <span class="kit-chip">Incluido</span>
+      <div class="kit-row-inner">
+        <div class="kit-row-media" style="background:#fff;">
+          <img src="images/posterJPD.png" alt="Póster de Juan Pablo Duarte">
+        </div>
+        <div class="kit-row-body">
+          <span class="kit-row-tag">Recurso 02</span>
+          <h3>Póster coleccionable de Juan Pablo Duarte</h3>
+          <p>Una pieza visual de nuestro Padre de la Patria, con los 6 valores que rigieron su vida — inspiración diaria para el cuarto de tus hijos.</p>
+          <span class="kit-chip">Incluido</span>
+        </div>
       </div>
     </div>
 
     <div class="kit-row">
-      <div class="kit-row-media" style="background:#fff;">
-        <img src="images/Artedecriar-guia.png" alt="Guía para padres El Arte de Criar">
-      </div>
-      <div class="kit-row-body">
-        <span class="kit-row-tag">Recurso 03</span>
-        <h3>Guía para padres "El Arte de Criar"</h3>
-        <p>Acompañamiento paso a paso para inculcar en tus hijos los 6 valores del póster, con preguntas y rutinas listas para usar.</p>
-        <span class="kit-chip">Incluido</span>
+      <div class="kit-row-inner">
+        <div class="kit-row-media" style="background:#fff;">
+          <img src="images/Artedecriar-guia.png" alt="Guía para padres El Arte de Criar">
+        </div>
+        <div class="kit-row-body">
+          <span class="kit-row-tag">Recurso 03</span>
+          <h3>Guía para padres "El Arte de Criar"</h3>
+          <p>Acompañamiento paso a paso para inculcar en tus hijos los 6 valores del póster, con preguntas y rutinas listas para usar.</p>
+          <span class="kit-chip">Incluido</span>
+        </div>
       </div>
     </div>
 
     <div class="kit-row reverse">
-      <div class="kit-row-media" style="background:#fff;">
-        <img src="images/certificado21dias.png" alt="Certificado de Compromiso Familiar">
-      </div>
-      <div class="kit-row-body">
-        <span class="kit-row-tag">Recurso 04</span>
-        <h3>Certificado de Compromiso Familiar</h3>
-        <p>Un documento de honor para personalizar con los nombres de la familia. Sella un pacto simbólico en el hogar.</p>
-        <span class="kit-chip">Incluido</span>
+      <div class="kit-row-inner">
+        <div class="kit-row-media" style="background:#fff;">
+          <img src="images/certificado21dias.png" alt="Certificado de Compromiso Familiar">
+        </div>
+        <div class="kit-row-body">
+          <span class="kit-row-tag">Recurso 04</span>
+          <h3>Certificado de Compromiso Familiar</h3>
+          <p>Un documento de honor para personalizar con los nombres de la familia. Sella un pacto simbólico en el hogar.</p>
+          <span class="kit-chip">Incluido</span>
+        </div>
       </div>
     </div>
 
@@ -341,7 +428,7 @@
 <!-- SECCIÓN 7: GARANTÍA -->
 <section class="guarantee">
   <div class="wrap">
-   <p>Tu compra es segura y está protegida. Si el material no cumple con tus expectativas, escríbenos a <a href="mailto:soporte@causa30.com" style="color:var(--green);font-weight:600;">soporte@causa30.com</a> y lo resolvemos.</p>
+    <p>Tu compra es segura y está protegida. Si el material no cumple con tus expectativas, escríbenos a <a href="mailto:soporte@causa30.com" style="color:var(--green);font-weight:600;">soporte@causa30.com</a> y lo resolvemos.</p>
     <div class="brandmark">Pinta Con Causa · Causa30</div>
   </div>
 </section>
