@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pinta Con Causa · Kit para formar el carácter de tus hijos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#12332A;
+    --green-deep:#0c261f;
+    --green-mid:#1b4a3d;
+    --coral:#F0A190;
+    --coral-deep:#e2816e;
+    --cream:#FBF7F1;
+    --cream-2:#F2EBDD;
+    --ink:#1c2620;
+    --ink-soft:#4d5850;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Manrope',sans-serif;margin:0;}
+  p{margin:0 0 1em 0;}
+  .cursive{font-family:'Caveat',cursive;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- SECTION 1: HERO ---------- */
+  .hero{
+    background:radial-gradient(circle at 30% 20%, var(--green-mid) 0%, var(--green) 45%, var(--green-deep) 100%);
+    color:#fff;
+    text-align:center;
+    padding:56px 24px 64px 24px;
+  }
+  .hero .logo{
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing:1px;
+    margin-bottom:36px;
+  }
+  .hero .logo span{color:var(--coral);}
+  .hero h1{
+    font-size:32px;
+    line-height:1.28;
+    font-weight:800;
+    max-width:480px;
+    margin:0 auto 18px auto;
+  }
+  .hero h1 em{color:var(--coral);font-style:normal;}
+  .hero .slogan{
+    font-family:'Caveat',cursive;
+    font-size:22px;
+    color:#e9ddc9;
+    margin-top:6px;
+  }
+
+  /* ---------- SECTION 2: PROBLEMA / SOLUCIÓN ---------- */
+  .problem{
+    background:#fff;
+    text-align:center;
+    padding:52px 24px;
+  }
+  .problem .eyebrow{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--coral-deep);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .problem h2{
+    font-size:23px;
+    color:var(--green);
+    max-width:460px;
+    margin:0 auto 18px auto;
+    line-height:1.35;
+  }
+  .problem p{max-width:460px;margin-left:auto;margin-right:auto;color:var(--ink-soft);}
+  .problem .highlight{
+    font-weight:700;
+    color:var(--green);
+  }
+
+  /* ---------- SECTION 3: PROPUESTA ---------- */
+  .proposal{
+    background:var(--cream-2);
+    text-align:center;
+    padding:52px 24px 36px 24px;
+  }
+  .proposal .eyebrow{
+    font-size:12px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--coral-deep);font-weight:700;margin-bottom:14px;
+  }
+  .proposal h2{font-size:25px;color:var(--green);margin-bottom:10px;}
+  .proposal p{max-width:460px;margin:0 auto;color:var(--ink-soft);}
+
+  /* ---------- SECTION 4: LOS 4 ARTÍCULOS (formato catálogo) ---------- */
+  .kit{background:var(--cream-2);padding:8px 24px 52px 24px;}
+  .kit-row{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    background:#fff;
+    border-radius:16px;
+    padding:14px;
+    margin-bottom:16px;
+    box-shadow:14px 20px 30px -8px rgba(201,96,62,0.48), 6px 10px 14px -4px rgba(201,96,62,0.3);
+  }
+  .kit-row.reverse{flex-direction:row-reverse;}
+  .kit-row-media{
+    flex:0 0 108px;
+    width:108px;
+    aspect-ratio:1000/1320;
+    border-radius:10px;
+    overflow:hidden;
+    background:linear-gradient(135deg, var(--green-mid), var(--green));
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .kit-row-media img{width:100%;height:100%;object-fit:cover;}
+  .kit-row-media .ph-icon{width:34px;height:34px;color:#fff;opacity:0.85;}
+  .kit-row-body{flex:1;min-width:0;padding-top:2px;}
+  .kit-row-tag{
+    display:inline-block;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:10.5px;
+    letter-spacing:0.5px;
+    color:#fff;
+    background:var(--coral);
+    padding:3px 10px;
+    border-radius:5px;
+    margin-bottom:8px;
+  }
+  .kit-row.reverse .kit-row-tag{background:var(--green);}
+  .kit-row-body h3{font-size:14.5px;line-height:1.3;color:var(--green);margin-bottom:6px;}
+  .kit-row-body p{font-size:12px;line-height:1.5;color:var(--ink-soft);margin-bottom:8px;}
+  .kit-chip{
+    display:inline-block;
+    font-size:10px;font-weight:700;letter-spacing:0.3px;
+    color:var(--green);background:#eaf1ee;
+    padding:3px 10px;border-radius:20px;
+  }
+
+  /* ---------- SECTION 5: BENEFICIOS ---------- */
+  .benefits{
+    background:var(--green);
+    color:#fff;
+    padding:52px 24px;
+    text-align:center;
+  }
+  .benefits h2{font-size:22px;margin-bottom:30px;max-width:420px;margin-left:auto;margin-right:auto;}
+  .benefit-list{max-width:440px;margin:0 auto;text-align:left;}
+  .benefit-row{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .benefit-row:last-child{border-bottom:none;}
+  .benefit-emoji{font-size:19px;flex-shrink:0;}
+  .benefit-txt b{color:var(--coral);}
+  .benefit-txt{font-size:14px;color:#e8ece9;}
+
+  /* ---------- SECTION 6: CIERRE / CTA ---------- */
+  .cta-section{
+    background:linear-gradient(180deg, var(--coral) 0%, var(--coral-deep) 100%);
+    color:#fff;
+    text-align:center;
+    padding:52px 24px 58px 24px;
+  }
+  .cta-tag{
+    font-size:12px;letter-spacing:2px;text-transform:uppercase;
+    font-weight:800;color:#fff;
+    background:rgba(255,255,255,0.18);
+    display:inline-block;padding:6px 16px;border-radius:20px;
+    margin-bottom:22px;
+  }
+  .price-row{margin-bottom:6px;}
+  .price-old{
+    font-size:17px;text-decoration:line-through;
+    color:rgba(255,255,255,0.7);margin-right:10px;
+  }
+  .price-new{font-family:'Manrope',sans-serif;font-weight:800;font-size:44px;}
+  .price-sub{font-size:12.5px;color:rgba(255,255,255,0.85);margin-top:2px;margin-bottom:26px;}
+  .cta-btn{
+    display:inline-block;
+    background:var(--green);
+    color:#fff;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:15.5px;
+    padding:18px 26px;
+    border-radius:14px;
+    text-decoration:none;
+    max-width:330px;
+    line-height:1.35;
+    box-shadow:0 12px 24px rgba(12,38,31,0.35);
+  }
+  .cta-micro{
+    margin-top:16px;font-size:12.5px;
+    color:rgba(255,255,255,0.85);
+  }
+  .cta-micro b{color:#fff;}
+
+  /* ---------- SECTION 7: GARANTÍA ---------- */
+  .guarantee{
+    background:var(--cream);
+    text-align:center;
+    padding:30px 24px 46px 24px;
+  }
+  .guarantee p{
+    font-size:12px;color:var(--ink-soft);
+    max-width:380px;margin:0 auto;
+  }
+  .guarantee .brandmark{
+    margin-top:18px;font-family:'Caveat',cursive;
+    font-size:16px;color:var(--green);
+  }
+</style>
+</head>
+<body>
+
+<!-- SECCIÓN 1: ENCABEZADO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="logo">CAUSA<span>30</span></div>
+    <h1>Siembra valores hoy. <em>Cosecha carácter</em> mañana.</h1>
+    <p class="hero-desc" style="max-width:380px;margin:0 auto;color:#cfd9d3;font-size:14.5px;">Un kit para enseñarle a tu hijo, a través de nuestra propia historia, quién quiere llegar a ser.</p>
+    <div class="slogan">porque ayudar es todo un arte</div>
+  </div>
+</section>
+
+<!-- SECCIÓN 2: PROBLEMA Y SOLUCIÓN -->
+<section class="problem">
+  <div class="wrap">
+    <div class="eyebrow">El reto de hoy</div>
+    <h2>¿Sientes que el mundo actual dificulta transmitir valores sólidos a tus hijos?</h2>
+    <p>No estás solo. Entre la prisa y las pantallas, criar niños con carácter fuerte y sentido de identidad se ha vuelto un verdadero reto para cualquier padre.</p>
+    <p class="highlight">Por eso diseñamos una herramienta para reconectar con tus hijos a través de nuestra historia — de forma divertida, práctica y con propósito.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN 3: PROPUESTA ÚNICA -->
+<section class="proposal">
+  <div class="wrap">
+    <div class="eyebrow">Te presentamos</div>
+    <h2>El Kit Digital<br>"Pinta Con Causa"</h2>
+    <p>Cuatro herramientas pensadas para enseñar a tus hijos los principios que formaron a los grandes héroes de nuestra historia dominicana — mientras, con tu compra, ayudan a una causa real.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN 4: LOS 4 ARTÍCULOS -->
+<section class="kit">
+  <div class="wrap">
+
+    <div class="kit-row">
+      <div class="kit-row-media">
+        <img src="images/pconcausalibro.png" alt="Libro para colorear 21 Días, Dos Generaciones">
+      </div>
+      <div class="kit-row-body">
+        <span class="kit-row-tag">Recurso 01</span>
+        <h3>Libro para colorear "21 Días, Dos Generaciones"</h3>
+        <p>Un recorrido ilustrado por los personajes más relevantes de nuestra historia dominicana, junto a los valores que definieron su carácter.</p>
+        <span class="kit-chip">Incluido</span>
+      </div>
+    </div>
+
+    <div class="kit-row reverse">
+      <div class="kit-row-media" style="background:#fff;">
+        <img src="images/posterJPD.png" alt="Póster de Juan Pablo Duarte">
+      </div>
+      <div class="kit-row-body">
+        <span class="kit-row-tag">Recurso 02</span>
+        <h3>Póster coleccionable de Juan Pablo Duarte</h3>
+        <p>Una pieza visual de nuestro Padre de la Patria, con los 6 valores que rigieron su vida — inspiración diaria para el cuarto de tus hijos.</p>
+        <span class="kit-chip">Incluido</span>
+      </div>
+    </div>
+
+    <div class="kit-row">
+      <div class="kit-row-media" style="background:#fff;">
+        <img src="images/Artedecriar-guia.png" alt="Guía para padres El Arte de Criar">
+      </div>
+      <div class="kit-row-body">
+        <span class="kit-row-tag">Recurso 03</span>
+        <h3>Guía para padres "El Arte de Criar"</h3>
+        <p>Acompañamiento paso a paso para inculcar en tus hijos los 6 valores del póster, con preguntas y rutinas listas para usar.</p>
+        <span class="kit-chip">Incluido</span>
+      </div>
+    </div>
+
+    <div class="kit-row reverse">
+      <div class="kit-row-media" style="background:#fff;">
+        <img src="images/certificado21dias.png" alt="Certificado de Compromiso Familiar">
+      </div>
+      <div class="kit-row-body">
+        <span class="kit-row-tag">Recurso 04</span>
+        <h3>Certificado de Compromiso Familiar</h3>
+        <p>Un documento de honor para personalizar con los nombres de la familia. Sella un pacto simbólico en el hogar.</p>
+        <span class="kit-chip">Incluido</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 5: BENEFICIOS -->
+<section class="benefits">
+  <div class="wrap">
+    <h2>Al adquirir este kit, tus hijos van a:</h2>
+    <div class="benefit-list">
+      <div class="benefit-row"><span class="benefit-emoji">✨</span><span class="benefit-txt"><b>Valorar su historia</b> — comprender las raíces de nuestra identidad dominicana.</span></div>
+      <div class="benefit-row"><span class="benefit-emoji">✨</span><span class="benefit-txt"><b>Asimilar valores</b> — interiorizar virtudes como integridad, respeto y responsabilidad.</span></div>
+      <div class="benefit-row"><span class="benefit-emoji">✨</span><span class="benefit-txt"><b>Tener modelos a seguir</b> — figuras reales que los guían hacia metas claras.</span></div>
+      <div class="benefit-row"><span class="benefit-emoji">✨</span><span class="benefit-txt"><b>Fortalecer la unión familiar</b> — recuerdos significativos alrededor de la mesa.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 6: CIERRE Y CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-tag">Oferta de lanzamiento</div>
+    <div class="price-row">
+      <span class="price-old">$19</span>
+      <span class="price-new">$11.99</span>
+    </div>
+    <div class="price-sub">Acceso inmediato a los 4 recursos digitales</div>
+    <a class="cta-btn" href="https://payhip.com/b/Zr0JS" target="_blank" rel="noopener">Comprar y Ayudar</a>
+    <div class="cta-micro"><b>$5</b> de tu compra van directo a la causa activa este mes</div>
+  </div>
+</section>
+
+<!-- SECCIÓN 7: GARANTÍA -->
+<section class="guarantee">
+  <div class="wrap">
+    <p>Tu compra es segura y está protegida. Si el material no cumple con tus expectativas, escríbenos y lo resolvemos.</p>
+    <div class="brandmark">Pinta Con Causa · Causa30</div>
+  </div>
+</section>
+
+</body>
+</html>
