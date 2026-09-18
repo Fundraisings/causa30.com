@@ -2,7 +2,6 @@ const CACHE_NAME = 'causa30-v3';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/objetivo90.html',
   '/legal.html',
   '/style.css',
   '/app.js',
