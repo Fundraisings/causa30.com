@@ -1335,3 +1335,27 @@
   font-weight:600;
   box-shadow:0 10px 22px -10px rgba(232,102,74,.5);
 }
+.bonus-box{
+  max-width:520px;
+  margin:0 auto;
+  background:#fff;
+  border:2px dashed var(--coral);
+  border-radius:20px;
+  padding:26px 24px;
+  text-align:center;
+}
+.bonus-tag{
+  display:inline-block;
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  font-size:11px;
+  letter-spacing:0.5px;
+  color:#fff;
+  background:var(--coral);
+  padding:5px 14px;
+  border-radius:20px;
+  margin-bottom:12px;
+}
+.bonus-box h3{font-size:19px;color:var(--green);margin-bottom:10px;}
+.bonus-box p{font-size:13.5px;color:var(--ink-soft);margin-bottom:0;}
+.bonus-deadline{margin-top:12px;font-size:11.5px;font-weight:700;color:var(--coral-deep);}
