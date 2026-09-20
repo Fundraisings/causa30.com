@@ -13,7 +13,6 @@
 <link rel="apple-touch-icon" href="images/icon192.png">
 <title>CAUSA30 · Una compra. Doble propósito</title>
 <meta name="description" content="Cada 30 días, productos seleccionados donan parte de su venta a una fundación aliada. Descubre el producto, descubre la causa.">
-<!-- Vista previa al compartir (WhatsApp, Facebook, Instagram) -->
 <meta property="og:title" content="Causa30 · Una compra. Doble propósito">
 <meta property="og:description" content="Te invito a un consumo más inteligente. Tu compra tiene doble propósito.">
 <meta property="og:image" content="https://causa30.com/images/og-cover3.png">
@@ -28,7 +27,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- BANNER DE INSTALACIÓN — estilo Mobbin -->
 <div class="install-banner" id="installBanner">
   <div class="install-banner-left">
     <div class="install-banner-icon"><img src="images/icon192.png" alt="Causa30"></div>
@@ -49,7 +47,6 @@
   3. Confirma — ¡listo, Causa30 ya queda como una app más!
 </div>
 
-<!-- COVER DE BIENVENIDA — pantalla completa, una vez por sesión -->
 <div class="welcome-cover" id="welcomeCover">
 <img src="images/logo.png" alt="Causa30" class="wc-logo-img">
 <div class="wc-shapes">
@@ -64,7 +61,6 @@ Descubrir Causa30
 </button>
 </div>
 <div class="wrap">
-<!-- HERO -->
 <div class="hero">
 <div class="brand-center"><img src="images/logo.png" alt="Causa30" class="brand-logo"></div>
 <p class="intrigue">ELIGE → COMPRA → ACTIVA LA AYUDA.</p>
@@ -84,7 +80,6 @@ Descubrir Causa30
 </div>
 </div>
 </div>
-<!-- ENTRADA OCULTA: FUNDACION + MASCOTAS -->
 <section style="padding-top:32px;padding-bottom:0;text-align:center;">
 <span class="fund-pulse-label">Este mes apoyamos a esta fundación</span>
 <div class="fund-pulse-wrap">
@@ -95,7 +90,6 @@ Descubrir Causa30
 </div>
 <div class="fund-pulse-cta">Toca para conocerla</div>
 </section>
-<!-- PINTA CON CAUSA — banner con flip -->
 <section style="padding-top:36px;padding-bottom:40px;">
 <span class="eyebrow" style="text-align:center;display:block;">🎨 Pinta Con Causa</span>
 <h2 style="text-align:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:21px;line-height:1.35;color:var(--verde-deep);max-width:320px;margin:8px auto 0;">Libros imprimibles para colorear que enseñan valores a tus hijos mientras apoyas la causa del mes.</h2>
@@ -187,6 +181,37 @@ Descubrir Causa30
   <span class="libromes-eyebrow">COMUNIDAD C30</span>
   <h2 class="libromes-title">únete y sé parte del movimiento</h2>
   <div class="libromes-tagline">Recibe tu Código C30 + un regalo de bienvenida</div>
+  <div class="libromes-body">
+    <div class="libromes-text">
+      <div class="libromes-gift-line">🎁 Al unirte recibes:<br><span class="libromes-book-name">un regalo de bienvenida</span></div>
+      <ul class="libromes-bullets">
+        <li>Tu Código C30 personal.</li>
+        <li>Un regalo de bienvenida en tu correo.</li>
+        <li>Sorpresas exclusivas, solo para la comunidad.</li>
+      </ul>
+    </div>
+    <div class="libromes-book-tablet">
+      <img src="/images/comunidad-c30.png" alt="Comunidad Causa30">
+    </div>
+  </div>
+
+  <div id="libroMesUnregistered">
+    <p class="libromes-cta-line">Sé parte de la Comunidad C30</p>
+    <p class="libromes-cta-sub">Déjanos tu correo y recibe tu código C30 para empezar a ser parte de esto.</p>
+    <input type="text" id="libroMesEmailInput" class="libromes-input" placeholder="Tu correo electrónico" inputmode="email">
+    <button class="libromes-submit" id="libroMesSubmit" type="button">Unirme a la comunidad →</button>
+    <p class="libromes-fineprint">Registro gratuito. Sin contraseña.</p>
+    <p class="libromes-footnote">Únete gratis. Las sorpresas vienen después.</p>
+  </div>
+
+  <div id="libroMesRegistered" style="display:none;">
+    <p class="libromes-cta-line">Ya eres parte de la Comunidad Causa30 🎉</p>
+    <p class="libromes-cta-sub">¿Se te ocurrió alguien a quien le gustaría unirse? Compártelo cuando quieras.</p>
+    <button class="libromes-submit" id="libroMesShareBtn" type="button">Compartir por WhatsApp →</button>
+  </div>
+</div>
+</section>
+
 <!-- META CAUSA30 — el libro como producto fundacional -->
 <section class="meta-section">
   <div class="meta-inner">
@@ -229,36 +254,7 @@ Descubrir Causa30
     </div>
   </div>
 </section>
-  <div class="libromes-body">
-    <div class="libromes-text">
-      <div class="libromes-gift-line">🎁 Al unirte recibes:<br><span class="libromes-book-name">un regalo de bienvenida</span></div>
-      <ul class="libromes-bullets">
-        <li>Tu Código C30 personal.</li>
-        <li>Un regalo de bienvenida en tu correo.</li>
-        <li>Sorpresas exclusivas, solo para la comunidad.</li>
-      </ul>
-    </div>
-    <div class="libromes-book-tablet">
-      <img src="/images/comunidad-c30.png" alt="Comunidad Causa30">
-    </div>
-  </div>
 
-  <div id="libroMesUnregistered">
-    <p class="libromes-cta-line">Sé parte de la Comunidad C30</p>
-    <p class="libromes-cta-sub">Déjanos tu correo y recibe tu código C30 para empezar a ser parte de esto.</p>
-    <input type="text" id="libroMesEmailInput" class="libromes-input" placeholder="Tu correo electrónico" inputmode="email">
-    <button class="libromes-submit" id="libroMesSubmit" type="button">Unirme a la comunidad →</button>
-    <p class="libromes-fineprint">Registro gratuito. Sin contraseña.</p>
-    <p class="libromes-footnote">Únete gratis. Las sorpresas vienen después.</p>
-  </div>
-
-  <div id="libroMesRegistered" style="display:none;">
-    <p class="libromes-cta-line">Ya eres parte de la Comunidad Causa30 🎉</p>
-    <p class="libromes-cta-sub">¿Se te ocurrió alguien a quien le gustaría unirse? Compártelo cuando quieras.</p>
-    <button class="libromes-submit" id="libroMesShareBtn" type="button">Compartir por WhatsApp →</button>
-  </div>
-</div>
-</section>
 <!-- DESCUBRE MÁS (texto rotativo + 3 imágenes visibles rotando, con texto sincronizado debajo) -->
 <section style="padding-top:0;">
 <div style="text-align:center;">
@@ -279,7 +275,6 @@ Descubrir Causa30
 </div>
 </div>
 </section>
-<!-- RESULTADOS -->
 <section style="padding-top:0;">
 <div class="libro-mes" style="text-align:center;">
 <span class="eyebrow" style="text-align:center;display:block;">Transparencia · Ejemplo ilustrativo</span>
@@ -287,8 +282,6 @@ Descubrir Causa30
 <button class="receipt-btn-standalone" id="receiptBtn">Ver comprobante →</button>
 </div>
 </section>
-<!-- SUMAR A CAUSA30 (compacto, al final) -->
- <!-- ENVÍA TU COMPROBANTE Y ACTIVA TU REGALO -->
 <section style="padding-top:0;" id="receiptSection">
 <div class="receipt-card">
   <div id="receiptBefore">
