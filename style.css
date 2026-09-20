@@ -1381,7 +1381,7 @@
 @media (prefers-reduced-motion: reduce){
   .pcc-cta-line{animation:none;}
 }
-/* ============ META CAUSA30 ============ */
+/* ============ SECCIÓN META ============ */
 .meta-section{
   background:#0a0a0a;
   padding:44px 22px 48px 22px;
@@ -1437,71 +1437,72 @@
 }
 .meta-counter-box{
   position:relative;
-  background:linear-gradient(180deg, #151515, #0d0d0d);
-  border-radius:22px;
-  padding:28px 24px 24px 24px;
+  background:transparent;
+  border-radius:0;
+  padding:0;
   text-align:center;
-  border:1px solid rgba(232,102,74,.35);
-  box-shadow:
-    0 0 0 1px rgba(232,102,74,.08),
-    0 0 24px rgba(232,102,74,.25),
-    0 0 60px rgba(232,102,74,.12);
-  animation:metaGlow 3.2s ease-in-out infinite;
-}
-@keyframes metaGlow{
-  0%,100%{
-    box-shadow:
-      0 0 0 1px rgba(232,102,74,.08),
-      0 0 24px rgba(232,102,74,.25),
-      0 0 60px rgba(232,102,74,.12);
-  }
-  50%{
-    box-shadow:
-      0 0 0 1px rgba(232,102,74,.18),
-      0 0 34px rgba(232,102,74,.4),
-      0 0 80px rgba(232,102,74,.2);
-  }
+  border:none;
+  box-shadow:none;
 }
 .meta-counter-label{
-  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(255,255,255,.45);margin-bottom:10px;
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);margin-bottom:8px;
 }
 .meta-counter-nums{
   font-family:'Manrope',sans-serif;font-weight:800;
-  font-size:40px;color:#fff;line-height:1;
+  font-size:56px;color:#fff;line-height:1;
 }
 .meta-counter-nums span{color:var(--coral);}
 .meta-counter-sub{
-  font-size:12.5px;color:rgba(255,255,255,.55);margin-top:6px;margin-bottom:18px;
+  font-family:'Manrope',sans-serif;font-weight:800;
+  font-size:13px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--coral);margin-top:10px;margin-bottom:20px;
 }
 .meta-progress-track{
-  width:100%;height:10px;border-radius:20px;
-  background:rgba(255,255,255,.08);
+  width:100%;height:6px;border-radius:20px;
+  background:rgba(255,255,255,.1);
   overflow:hidden;
 }
 .meta-progress-fill{
   height:100%;width:0.4%;min-width:6px;
   border-radius:20px;
-  background:linear-gradient(90deg, var(--coral-deep), var(--coral));
-  box-shadow:0 0 10px rgba(232,102,74,.6);
+  background:var(--coral);
 }
-.meta-progress-caption{
-  margin-top:10px;font-size:11px;color:rgba(255,255,255,.4);
-}
-.meta-goals{margin-top:22px;display:flex;flex-direction:column;gap:10px;}
+.meta-goals{margin-top:30px;display:flex;flex-direction:column;gap:14px;}
 .meta-goal-chip{
-  display:flex;align-items:center;gap:12px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:14px;
-  padding:13px 16px;
+  text-align:left;
+  background:transparent;
+  border:none;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:18px 0 0 0;
 }
-.meta-goal-icon{font-size:20px;flex-shrink:0;}
-.meta-goal-text{font-size:12.5px;line-height:1.4;color:#DCE8E2;}
-.meta-goal-text b{color:#fff;display:block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:2px;}
-.meta-goal-chip.primary .meta-goal-text b{color:var(--coral);}
-.meta-goal-chip.secondary .meta-goal-text b{color:#8FC4AC;}
-.meta-cta-wrap{text-align:center;margin-top:28px;}
+.meta-goal-eyebrow{
+  font-family:'Manrope',sans-serif;font-weight:800;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.meta-goal-chip.primary .meta-goal-eyebrow{color:var(--coral);}
+.meta-goal-chip.secondary .meta-goal-eyebrow{color:#8FC4AC;}
+.meta-goal-big{
+  font-family:'Manrope',sans-serif;font-weight:800;
+  color:#fff;line-height:1.15;
+}
+.meta-goal-chip.primary .meta-goal-big{font-size:26px;}
+.meta-goal-chip.secondary .meta-goal-big{font-size:22px;}
+.meta-goal-desc{
+  font-size:12.5px;color:#C7D6CE;line-height:1.5;margin-top:6px;
+}
+.meta-cta-wrap{text-align:center;margin-top:34px;}
+.meta-community-line{
+  font-family:'Manrope',sans-serif;font-weight:800;
+  font-size:15px;color:#fff;
+  margin-bottom:4px;
+  letter-spacing:.01em;
+}
+.meta-community-sub{
+  font-size:12px;color:rgba(255,255,255,.5);
+  margin-bottom:20px;
+}
 .meta-cta-btn{
   display:inline-block;
   background:var(--coral);color:#fff;
