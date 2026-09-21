@@ -55,18 +55,18 @@ if ('serviceWorker' in navigator) {
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpavpkp';
 
 const products = [
-  {biz:"Empresa X · Chocolate", name:"Chocolate X · Dark, Coco & Jengibre", price:"RD$ x", aporte:"RD$ x por compra", img:"images/producto-chocolate.png",
-   address:"Dirección pendiente de confirmar", hours:"Horario pendiente de confirmar",
-   compras:"x cantidad", donacion:"RD$xxx",
-   detail:"Por cada Chocolate X que compres, Empresa X realizará un aporte directamente a la fundación.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>Este aporte solo será efectivo si validas tu compra enviándonos el comprobante por WhatsApp.<br><br><a href=\"#\" class=\"go-to-receipt\">Validar mi compra →</a>"},
-  {biz:"Empresa X · Alimento para Mascotas", name:"Alimento para Perros X", price:"RD$xxx", aporte:"RD$ x por compra", img:"images/producto-petfood.png",
-   address:"Dirección pendiente de confirmar", hours:"Horario pendiente de confirmar",
-   compras:"xcantidad", donacion:"RD$xxx",
-   detail:"Por cada Alimento para Perros X que compres, Empresa X realizará un aporte directamente a la fundación.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>Este aporte solo será efectivo si validas tu compra enviándonos el comprobante por WhatsApp.<br><br><a href=\"#\" class=\"go-to-receipt\">Validar mi compra →</a>"},
-  {biz:"Supermercados x", name:"Combo Solidario · 4 Botellas de Agua", price:"RD$ xxx", aporte:"RD$ x por compra", img:"images/producto-agua.png",
-   address:"Supermercados xx — Sucursal [NOMBRE DE LA SUCURSAL ACTIVA ESTA SEMANA]", hours:"Horario pendiente de confirmar",
-   compras:"x", donacion:"RD$xx",
-   detail:"Por cada Combo Solidario · 4 Botellas de Agua que compres, Supermercados x realizará un aporte directamente a la fundación.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>Este aporte solo será efectivo si validas tu compra enviándonos el comprobante por WhatsApp.<br><br><a href=\"#\" class=\"go-to-receipt\">Validar mi compra →</a>"},
+  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Educa", price:"$7.41", aporte:"$3 por compra", img:"images/productolibro1.jpg",
+   fundacion:"Fundación De Blanck",
+   compras:"Actualizado semanalmente", donacion:"$3 por libro vendido",
+   detail:"Por cada libro que compres, <b>US$3</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"pintaconcausa.html\" class=\"btn-ghost\">Ver el libro y comprar →</a>"},
+  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Inspira", price:"$7.41", aporte:"$3 por compra", img:"images/productolibro2.jpg",
+   fundacion:"Fundación De Blanck",
+   compras:"Actualizado semanalmente", donacion:"$3 por libro vendido",
+   detail:"Por cada libro que compres, <b>US$3</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"pintaconcausa.html\" class=\"btn-ghost\">Ver el libro y comprar →</a>"},
+  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Transforma", price:"$7.41", aporte:"$3 por compra", img:"images/productolibro3.jpg",
+   fundacion:"Fundación De Blanck",
+   compras:"Actualizado semanalmente", donacion:"$3 por libro vendido",
+   detail:"Por cada libro que compres, <b>US$3</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"pintaconcausa.html\" class=\"btn-ghost\">Ver el libro y comprar →</a>"},
 ];
 let active = 0;
 const carousel = document.getElementById('carousel');
