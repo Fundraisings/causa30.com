@@ -1494,3 +1494,10 @@
   text-decoration:none;
   box-shadow:0 14px 28px -10px rgba(232,102,74,.55);
 }
+.go-to-meta{
+  display:inline-block;
+  margin-top:8px;
+  color:var(--coral-deep);
+  font-weight:700;
+  text-decoration:underline;
+}
