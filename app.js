@@ -373,6 +373,11 @@ document.getElementById('whereBody').addEventListener('click', (e) => {
     closeModal(whereModal);
     document.getElementById('receiptSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+  if(e.target.classList.contains('go-to-meta')){
+    e.preventDefault();
+    closeModal(whereModal);
+    document.getElementById('pintaConCausaSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 });
 // DESLIZAR DENTRO DE LA FICHA AMPLIADA — cambia de producto sin cerrar el modal
 const detailPhoto = document.getElementById('detailPhoto');
