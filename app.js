@@ -55,18 +55,18 @@ if ('serviceWorker' in navigator) {
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpavpkp';
 
 const products = [
-  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Educa", price:"$7.41", aporte:"$3 por compra", img:"images/productolibro1.jpg",
+  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Educa", price:"$10.00", aporte:"$2 por compra", img:"images/productolibro1.jpg",
    fundacion:"Fundación De Blanck",
-   compras:"Actualizado semanalmente", donacion:"$3 por libro vendido",
-   detail:"Por cada libro que compres, <b>US$3</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"#\" class=\"go-to-meta\">Descubre todo lo que puede hacer este libro →</a>"},
-  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Inspira", price:"$7.41", aporte:"$3 por compra", img:"images/productolibro2.jpg",
+   compras:"Actualizado semanalmente", donacion:"$2 por libro vendido",
+   detail:"Por cada libro que compres, <b>US$2</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"#\" class=\"go-to-meta\">Descubre todo lo que puede hacer este libro →</a>"},
+  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Inspira", price:"$10.00", aporte:"$2 por compra", img:"images/productolibro2.jpg",
    fundacion:"Fundación De Blanck",
-   compras:"Actualizado semanalmente", donacion:"$3 por libro vendido",
+   compras:"Actualizado semanalmente", donacion:"$2 por libro vendido",
    detail:"Por cada libro que compres, <b>US$3</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"#\" class=\"go-to-meta\">Descubre todo lo que puede hacer este libro →</a>"},
-  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Transforma", price:"$7.41", aporte:"$3 por compra", img:"images/productolibro3.jpg",
+  {biz:"Pinta Con Causa · Libro Educativo", name:"21 Días, Dos Generaciones — Transforma", price:"$10.00", aporte:"$2 por compra", img:"images/productolibro3.jpg",
    fundacion:"Fundación De Blanck",
-   compras:"Actualizado semanalmente", donacion:"$3 por libro vendido",
-   detail:"Por cada libro que compres, <b>US$3</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"#\" class=\"go-to-meta\">Descubre todo lo que puede hacer este libro →</a>"},
+   compras:"Actualizado semanalmente", donacion:"$2 por libro vendido",
+   detail:"Por cada libro que compres, <b>US$2</b> van directamente a <b>Fundación De Blanck</b>.<br><span class=\"cta-highlight\">🙌 Tú haces que la ayuda sea posible.</span><br>No necesitas enviar comprobante — la compra se realiza directo online.<br><br><a href=\"#\" class=\"go-to-meta\">Descubre todo lo que puede hacer este libro →</a>"},
 ];
 let active = 0;
 const carousel = document.getElementById('carousel');
