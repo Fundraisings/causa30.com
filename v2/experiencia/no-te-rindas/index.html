@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12332A">
+
+  <title>Causa30 · Experiencias</title>
+  <meta name="description" content="Historias reales. Valores que transforman. Una causa que nos une.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/v2/experiencia/no-te-rindas/experiencia.css">
+</head>
+
+<body>
+
+<main class="experience">
+
+  <!-- ==============================
+       PANTALLA 1 · PORTADA
+  =============================== -->
+  <section class="screen screen-cover active" id="screen1">
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div class="screen-inner cover-inner">
+
+      <div class="brand">
+        <img src="/images/logo.png" alt="Causa30">
+      </div>
+
+      <div class="experience-label">
+        EXPERIENCIA 01
+      </div>
+
+      <div class="cover-content">
+
+        <p class="value-label">PERSEVERANCIA</p>
+
+        <h1>
+          NO TE<br>
+          <span>RINDAS</span>
+        </h1>
+
+        <p class="subtitle">
+          30 días para fortalecer<br>
+          la perseverancia.
+        </p>
+
+        <div class="cover-divider"></div>
+
+        <p class="cover-description">
+          Una historia real.<br>
+          Un reto personal.<br>
+          30 días para llevarlo a tu vida.
+        </p>
+
+      </div>
+
+      <div class="cover-bottom">
+
+        <div class="time-info">
+          <span class="time-icon">◷</span>
+          <span>Experiencia inicial: aprox. 30–40 min</span>
+        </div>
+
+        <button class="primary-btn" data-next="screen2">
+          COMENZAR
+          <span>→</span>
+        </button>
+
+        <p class="challenge-note">
+          + reto personal de 30 días
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       PANTALLA 2 · ANTES DE COMENZAR
+  =============================== -->
+  <section class="screen screen-light" id="screen2">
+
+    <div class="progress-top">
+      <div class="progress-line">
+        <span style="width:25%"></span>
+      </div>
+      <span class="progress-text">01 / 04</span>
+    </div>
+
+    <div class="screen-inner question-layout">
+
+      <div class="question-content">
+
+        <p class="eyebrow">ANTES DE COMENZAR</p>
+
+        <h2>
+          Antes de conocer<br>
+          su historia,<br>
+          <em>piensa en la tuya.</em>
+        </h2>
+
+        <p class="question">
+          ¿Hay algo importante que alguna vez quisiste conseguir...
+          pero has pensado en abandonar?
+        </p>
+
+        <div class="answer-list" data-question="q1">
+
+          <button class="answer-btn">
+            <span class="answer-dot"></span>
+            Sí, ahora mismo.
+          </button>
+
+          <button class="answer-btn">
+            <span class="answer-dot"></span>
+            Me ha pasado antes.
+          </button>
+
+          <button class="answer-btn">
+            <span class="answer-dot"></span>
+            No estoy seguro.
+          </button>
+
+        </div>
+
+        <div class="reflection hidden" id="reflection1">
+          <div class="reflection-line"></div>
+
+          <p>
+            Guarda eso en tu mente.
+          </p>
+
+          <strong>
+            Volveremos a ello más adelante.
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="bottom-action hidden" id="continue1">
+        <button class="primary-btn dark-btn" data-next="screen3">
+          CONTINUAR
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       PANTALLA 3 · DECISIÓN
+  =============================== -->
+  <section class="screen screen-light" id="screen3">
+
+    <div class="progress-top">
+      <div class="progress-line">
+        <span style="width:50%"></span>
+      </div>
+      <span class="progress-text">02 / 04</span>
+    </div>
+
+    <div class="screen-inner question-layout">
+
+      <div class="question-content">
+
+        <p class="eyebrow">UNA PREGUNTA</p>
+
+        <h2>
+          ¿Qué haces cuando<br>
+          algo <em>no funciona?</em>
+        </h2>
+
+        <p class="question small-question">
+          Elige la opción que más se parece a ti.
+        </p>
+
+        <div class="answer-list letter-list" data-question="q2">
+
+          <button class="answer-btn">
+            <span class="answer-letter">A</span>
+            <span>Sigo intentando exactamente lo mismo.</span>
+          </button>
+
+          <button class="answer-btn">
+            <span class="answer-letter">B</span>
+            <span>Cambio de estrategia, pero mantengo el objetivo.</span>
+          </button>
+
+          <button class="answer-btn">
+            <span class="answer-letter">C</span>
+            <span>Espero a sentirme motivado otra vez.</span>
+          </button>
+
+          <button class="answer-btn">
+            <span class="answer-letter">D</span>
+            <span>Empiezo a pensar que quizás debería dejarlo.</span>
+          </button>
+
+        </div>
+
+        <div class="reflection hidden" id="reflection2">
+          <div class="reflection-line"></div>
+
+          <p>Recuerda tu respuesta.</p>
+
+          <strong>
+            Porque perseverar no siempre significa
+            lo que pensamos.
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="bottom-action hidden" id="continue2">
+        <button class="primary-btn dark-btn" data-next="screen4">
+          CONOCER LA HISTORIA
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       PANTALLA 4 · HISTORIA
+  =============================== -->
+  <section class="screen screen-story" id="screen4">
+
+    <div class="story-background"></div>
+    <div class="story-overlay"></div>
+
+    <div class="story-top">
+      <span>CAUSA30</span>
+      <span>EXPERIENCIA 01</span>
+    </div>
+
+    <div class="screen-inner story-inner">
+
+      <div class="story-content">
+
+        <p class="story-kicker">
+          UNA HISTORIA REAL
+        </p>
+
+        <p class="story-status">
+          Protagonista pendiente de confirmación
+        </p>
+
+        <h2>
+          JUAN ROBERTO<br>
+          <span>MUSA</span>
+        </h2>
+
+        <div class="story-divider"></div>
+
+        <p class="story-intro">
+          Antes de conocer lo que consiguió,
+          queremos contarte lo que tuvo que atravesar.
+        </p>
+
+      </div>
+
+      <div class="story-bottom">
+
+        <button class="primary-btn coral-btn" id="storyStart">
+          COMENZAR HISTORIA
+          <span>→</span>
+        </button>
+
+        <p>
+          Capítulo 01 · Antes de empezar
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="v2.js"></script>
+
+</body>
+</html>
