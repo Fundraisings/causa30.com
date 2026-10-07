@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <title>Pet Home RD × Causa30 | Una compra que ayuda</title>
+  <meta name="description" content="Ayuda a Pet Home RD a llegar a su nuevo hogar. Por US$7 recibes una experiencia familiar completa y US$4 de cada venta válida se destinan a Pet Home." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#11110f; --cream:#f7f2e9; --paper:#fffdf8; --green:#1f5f4a;
+      --coral:#e8664a; --gold:#f0c85b; --muted:#706d66;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Manrope,system-ui,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+    .serif{font-family:"DM Serif Display",Georgia,serif}
+    .container{width:min(1180px,calc(100% - 36px));margin:auto}
+    .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+    .hero{
+      min-height:94svh;display:flex;align-items:center;position:relative;overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(8,8,8,.94) 0%,rgba(8,8,8,.78) 44%,rgba(8,8,8,.18) 74%,rgba(8,8,8,.05) 100%),
+        url("images/dog-home2.jpg") center 43%/cover no-repeat;
+      color:white;
+    }
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,#0b0b0b)}
+    .hero-copy{position:relative;z-index:2;max-width:690px;padding:110px 0 145px}
+    .hero h1{font-size:clamp(3.1rem,7vw,6.6rem);line-height:.88;letter-spacing:-.035em;margin:20px 0 25px}
+    .hero p{font-size:clamp(1rem,2vw,1.25rem);line-height:1.65;max-width:630px;color:#f1eee8}
+    .pill{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);padding:10px 14px;border-radius:999px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:17px 24px;font-weight:800;transition:.25s;cursor:pointer;border:0}
+    .btn-primary{background:var(--coral);color:white;box-shadow:0 14px 35px rgba(232,102,74,.25)}
+    .btn-primary:hover{transform:translateY(-2px);background:#d9583f}
+    .btn-dark{background:#111;color:#fff}.btn-dark:hover{transform:translateY(-2px)}
+    .hero .btn{margin-top:18px}
+    section{padding:100px 0}
+    .display{font-size:clamp(2.5rem,5.8vw,5.4rem);line-height:.98;letter-spacing:-.035em;margin:0}
+    .lead{font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.7;color:var(--muted)}
+    .black{background:#0b0b0b;color:white}
+    .cream{background:var(--cream)}
+    .green{background:var(--green);color:white}
+    .split{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center}
+    .photo{width:100%;display:block;border-radius:28px;box-shadow:0 24px 70px rgba(0,0,0,.16)}
+    .photo-frame{background:white;padding:12px;border-radius:32px;transform:rotate(-1.2deg);box-shadow:0 25px 80px rgba(0,0,0,.14)}
+    .photo-frame.alt{transform:rotate(1.2deg)}
+    .stat{font-size:clamp(4.6rem,10vw,9rem);line-height:.8;letter-spacing:-.06em;color:var(--gold);margin:0}
+    .money-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px}
+    .money-card{border:1px solid rgba(255,255,255,.15);border-radius:26px;padding:30px;background:rgba(255,255,255,.05)}
+    .money-card strong{font-size:clamp(2.5rem,6vw,5rem);display:block;line-height:1}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;align-items:start}
+    .product-card{background:white;border-radius:28px;padding:20px;box-shadow:0 20px 60px rgba(18,18,18,.08);border:1px solid #ece7dd}
+    .product-card img{width:100%;height:430px;object-fit:contain;display:block}
+    .product-card h3{font-family:"DM Serif Display",serif;font-size:1.75rem;margin:20px 0 8px}
+    .product-card p{color:var(--muted);line-height:1.65;font-size:.94rem}
+    .bundle{text-align:center;margin-top:50px}
+    .quote{font-size:clamp(2.4rem,5.5vw,5rem);line-height:1.04;max-width:950px;margin:0 auto;text-align:center}
+    .gallery{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:18px;margin-top:55px}
+    .gallery img{width:100%;height:460px;object-fit:cover;border-radius:24px}
+    .gallery img:nth-child(2),.gallery img:nth-child(3){height:350px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+    .step{padding:30px;border-radius:24px;background:#fff;border:1px solid #ebe6dc}
+    .step-num{font-family:"DM Serif Display";font-size:3.5rem;color:var(--coral);line-height:1}
+    .step h3{font-size:1.15rem;margin:14px 0 8px}.step p{color:var(--muted);line-height:1.6}
+    .impact-box{border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:42px;margin-top:48px;background:rgba(255,255,255,.04)}
+    .impact-placeholder{font-size:clamp(3rem,9vw,7rem);font-weight:800;letter-spacing:-.06em;line-height:.9}
+    .final{position:relative;overflow:hidden;text-align:center;background:#111;color:white}
+    .final:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.82)),url("images/dog-home6.jpg") center/cover;opacity:.82}
+    .final .container{position:relative;z-index:2;max-width:850px}
+    .logos{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:38px}
+    .petlogo{width:126px;height:126px;object-fit:cover;border-radius:18px}
+    .x{font-size:2rem;opacity:.45}
+    .c30{font-weight:800;letter-spacing:.12em;font-size:1.1rem}
+    .c30logo{width:min(230px,42vw);height:100px;object-fit:contain;display:block}
+    footer{background:#080808;color:#aaa;padding:32px 0;font-size:.8rem}
+    .sticky-buy{display:none}
+    .note{font-size:.78rem;color:#8c887f;line-height:1.5}
+    @media(max-width:800px){
+      .container{width:min(100% - 28px,1180px)}
+      section{padding:72px 0}
+      .hero{min-height:88svh;background-position:62% center}
+      .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.88) 64%,#0b0b0b)}
+      .hero-copy{padding:110px 0 110px;align-self:flex-end}
+      .hero h1{font-size:3.55rem}
+      .split{grid-template-columns:1fr;gap:40px}
+      .split .visual{order:-1}
+      .money-grid,.steps{grid-template-columns:1fr}
+      .products{grid-template-columns:1fr;gap:18px}
+      .product-card{display:grid;grid-template-columns:42% 1fr;gap:16px;align-items:center}
+      .product-card img{height:230px}
+      .product-card h3{font-size:1.4rem;margin-top:0}
+      .gallery{grid-template-columns:1fr 1fr;gap:10px}
+      .gallery img,.gallery img:nth-child(2),.gallery img:nth-child(3){height:250px;border-radius:16px}
+      .gallery img:first-child{grid-column:1/-1;height:390px}
+      .impact-box{padding:28px 22px}
+      .logos{gap:18px}.petlogo{width:100px;height:100px}
+      .sticky-buy{display:block;position:fixed;z-index:50;left:12px;right:12px;bottom:12px}
+      .sticky-buy .btn{width:100%;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+      footer{padding-bottom:90px}
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <div class="pill eyebrow">PET HOME RD × CAUSA30</div>
+      <h1 class="serif">Ayuda a Pet Home a llegar a su nuevo hogar.</h1>
+      <p>Pet Home necesita trasladar su refugio. Creamos una manera diferente de ayudar: por <strong>US$7</strong> recibes una experiencia digital para compartir valores en familia y <strong>US$4 de tu compra se destinan a Pet Home.</strong></p>
+      <a class="btn btn-primary buy-link" href="#compra">AYUDAR Y RECIBIR MI EXPERIENCIA · US$7 →</a>
+    </div>
+  </div>
+</header>
+
+<section class="black">
+  <div class="container split">
+    <div>
+      <div class="eyebrow" style="color:#f0c85b">UNA NECESIDAD REAL</div>
+      <h2 class="serif display" style="margin-top:18px">Un refugio no se muda solo.</h2>
+      <p class="lead" style="color:#c8c4bd;margin-top:26px">Pet Home atraviesa un momento que exige recursos: necesita trasladar a sus animales y continuar ofreciéndoles un lugar seguro. Esta campaña nace para sumar una nueva herramienta a ese esfuerzo.</p>
+      <p style="font-size:1.15rem;line-height:1.7;color:#fff"><strong>No reemplaza otras formas de ayudar.</strong> Las acompaña con algo diferente: una compra que también deja valor en casa.</p>
+    </div>
+    <div class="visual photo-frame">
+      <img class="photo" style="box-shadow:none;border-radius:20px" src="images/dog-home3.jpg" alt="Perros de Pet Home RD">
+    </div>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container" style="text-align:center;max-width:980px">
+    <div class="eyebrow" style="color:var(--coral)">UNA MANERA DIFERENTE DE AYUDAR</div>
+    <h2 class="serif quote" style="margin-top:24px">Un libro puede enseñar a un niño.<br><em>Una compra puede ayudar a un animal.</em></h2>
+    <p class="lead" style="max-width:720px;margin:28px auto 0">En lugar de elegir entre comprar algo para tu familia o apoyar una causa, esta campaña une las dos cosas.</p>
+  </div>
+</section>
+
+<section id="compra">
+  <div class="container">
+    <div style="text-align:center;max-width:850px;margin:auto">
+      <div class="eyebrow" style="color:var(--green)">TODO LO QUE RECIBES</div>
+      <h2 class="serif display" style="margin-top:18px">Una experiencia familiar completa.</h2>
+      <p class="lead">Tres piezas conectadas para descubrir, conversar y practicar valores en familia. Todo en formato digital.</p>
+    </div>
+
+    <div class="products">
+      <article class="product-card">
+        <img src="images/book-pethome.png" alt="21 Días, Dos Generaciones">
+        <div>
+          <div class="eyebrow" style="color:var(--coral)">PARA LOS NIÑOS</div>
+          <h3>21 Días, Dos Generaciones</h3>
+          <p>Libro para colorear que conecta historias y valores. Recibes una versión digital tipo flipbook y otra preparada para imprimir y colorear.</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img src="images/artedecriar.png" alt="El Arte de Criar">
+        <div>
+          <div class="eyebrow" style="color:var(--coral)">PARA LOS PADRES</div>
+          <h3>El Arte de Criar</h3>
+          <p>Guía práctica para llevar los seis valores de la experiencia a pequeñas acciones y conversaciones cotidianas con tus hijos.</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img src="images/posterjuanpabloduarte.png" alt="Póster Juan Pablo Duarte">
+        <div>
+          <div class="eyebrow" style="color:var(--coral)">PARA CASA</div>
+          <h3>Póster · 6 valores</h3>
+          <p>Una pieza imprimible inspirada en Juan Pablo Duarte para mantener presentes los seis valores y seguir conversándolos en familia.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="bundle">
+      <div class="eyebrow">EXPERIENCIA FAMILIAR COMPLETA</div>
+      <div class="serif" style="font-size:clamp(4rem,9vw,7.5rem);line-height:1;margin:12px 0">US$7</div>
+      <p class="lead" style="margin:0 auto 24px">Acceso digital a las tres piezas.</p>
+      <a class="btn btn-primary buy-link" href="#">RECIBIR LA EXPERIENCIA Y AYUDAR →</a>
+    </div>
+  </div>
+</section>
+
+<section class="black">
+  <div class="container">
+    <div class="split">
+      <div>
+        <img src="images/logo-pethome.jpg" class="petlogo" style="width:150px;height:150px;margin-bottom:30px" alt="Pet Home RD">
+        <div class="eyebrow" style="color:#f0c85b">TRANSPARENCIA DESDE EL PRINCIPIO</div>
+        <h2 class="serif display" style="margin-top:18px">De tus US$7,<br><span style="color:#f0c85b">US$4 van a Pet Home.</span></h2>
+        <p class="lead" style="color:#c8c4bd;margin-top:28px">Por cada venta válida realizada a través de esta campaña, Causa30 destina US$4 a Pet Home RD para apoyar su necesidad de traslado.</p>
+        <p class="note" style="color:#8f8b84">Venta válida: compra completada y no reembolsada ni revertida. Los costos de plataforma y procesamiento correspondientes a Causa30 no se descuentan de los US$4 destinados a Pet Home.</p>
+      </div>
+      <div>
+        <div class="money-grid">
+          <div class="money-card"><span class="eyebrow">TÚ PAGAS</span><strong>US$7</strong><span>por la experiencia completa</span></div>
+          <div class="money-card"><span class="eyebrow">PET HOME RECIBE</span><strong style="color:#f0c85b">US$4</strong><span>por cada venta válida</span></div>
+        </div>
+        <div style="margin-top:28px;border-top:1px solid rgba(255,255,255,.15);padding-top:28px">
+          <p style="font-size:1.25rem;line-height:1.6;margin:0"><strong>100 compras = US$400</strong> para Pet Home.<br><strong>1,000 compras = US$4,000.</strong><br>Cada compra suma.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div class="visual photo-frame alt">
+      <img class="photo" style="box-shadow:none;border-radius:20px" src="images/dog-home2.jpg" alt="Perro de Pet Home recibiendo cuidado">
+    </div>
+    <div>
+      <div class="eyebrow" style="color:var(--coral)">DETRÁS DE CADA NÚMERO</div>
+      <h2 class="serif display" style="margin-top:18px">Hay animales que dependen de que Pet Home pueda seguir adelante.</h2>
+      <p class="lead" style="margin-top:28px">Una mudanza significa mucho más que cambiar de dirección. Significa mover animales, reorganizar espacios y asegurar que el trabajo de rescate y cuidado pueda continuar.</p>
+      <p style="font-size:1.12rem;line-height:1.75">Por eso esta campaña no busca que compres por lástima. Busca darte <strong>una razón útil para participar</strong>: algo para compartir con tus hijos que, al mismo tiempo, ayuda a sostener una necesidad real.</p>
+    </div>
+  </div>
+
+  <div class="container gallery">
+    <img src="images/dog-home4.jpg" alt="Perro en Pet Home">
+    <img src="images/dog-home5.jpg" alt="Perros de Pet Home">
+    <img src="images/dog-home1.jpg" alt="Perro de Pet Home">
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container">
+    <div style="text-align:center;max-width:800px;margin:auto">
+      <div class="eyebrow" style="color:var(--green)">ASÍ DE SIMPLE</div>
+      <h2 class="serif display" style="margin-top:18px">Compras. Recibes. Ayudas.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><h3>Eliges participar</h3><p>Adquieres la experiencia familiar completa por US$7 desde esta página.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Recibes tus materiales</h3><p>Accedes digitalmente al libro, la guía para padres y el póster imprimible.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Tu compra genera ayuda</h3><p>US$4 de cada venta válida de esta campaña se destinan a Pet Home RD.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="green">
+  <div class="container" style="text-align:center;max-width:900px">
+    <div class="eyebrow" style="color:#d9f0e5">LA IDEA DETRÁS DE CAUSA30</div>
+    <h2 class="serif quote" style="margin-top:22px">Tu compra empieza en casa.<br>Su impacto llega al refugio. 🐾</h2>
+    <p style="font-size:1.15rem;line-height:1.7;max-width:700px;margin:28px auto 0;color:#e5f0eb">Causa30 desarrolla productos e iniciativas que buscan generar recursos de manera sostenible para ayudar a causas animales: crear algo que tenga valor para quien lo compra y convertir parte de esa compra en ayuda.</p>
+  </div>
+</section>
+
+<section class="black">
+  <div class="container">
+    <div style="max-width:820px">
+      <div class="eyebrow" style="color:#f0c85b">RESULTADO DE LA CAMPAÑA</div>
+      <h2 class="serif display" style="margin-top:18px">Queremos que la ayuda también pueda verse.</h2>
+      <p class="lead" style="color:#c8c4bd">Cuando la campaña esté activa, este espacio podrá mostrar el resultado acumulado a partir de ventas válidas verificadas.</p>
+    </div>
+    <div class="impact-box">
+      <div class="eyebrow">GENERADO PARA PET HOME</div>
+      <div class="impact-placeholder" style="margin-top:14px">US$ —</div>
+      <p style="color:#aaa;margin:18px 0 0">— compras válidas × US$4</p>
+      <p class="note" style="color:#777;margin-top:24px">El contador se activará cuando la campaña comience y exista información real de ventas. No se muestran cifras simuladas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <div class="logos">
+      <img src="images/logo-pethome.jpg" class="petlogo" alt="Pet Home RD">
+      <span class="x">×</span>
+      <img src="images/logoC30.png" class="c30logo" alt="Causa30">
+    </div>
+    <div class="eyebrow" style="color:#f0c85b">UNA COMPRA. DOS FORMAS DE HACER ALGO BUENO.</div>
+    <h2 class="serif display" style="margin:22px 0">Ayuda a Pet Home a llegar a su nuevo hogar.</h2>
+    <p style="font-size:1.15rem;line-height:1.7;color:#e2ded7;max-width:690px;margin:0 auto 28px">Recibe una experiencia para compartir valores en familia y convierte parte de tu compra en ayuda directa para esta campaña.</p>
+    <a class="btn btn-primary buy-link" href="#">RECIBIR MI EXPERIENCIA · US$7 →</a>
+    <p class="note" style="color:#aaa;margin-top:18px">US$4 de cada venta válida realizada a través de esta campaña se destinan a Pet Home RD.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <span>Causa30 · Un producto del ecosistema Altrua.</span>
+    <span>© 2026 Altrua Global LLC · Miami, Florida, USA.</span>
+  </div>
+</footer>
+
+<div class="sticky-buy">
+  <a class="btn btn-primary buy-link" href="#">AYUDAR + RECIBIR · US$7 →</a>
+</div>
+
+<script>
+  // Checkout de la campaña.
+  const CHECKOUT_URL = "https://payhip.com/b/Zr0JS";
+
+  document.querySelectorAll(".buy-link").forEach(link => {
+    link.addEventListener("click", (e) => {
+      if (!CHECKOUT_URL) {
+        e.preventDefault();
+        document.getElementById("compra").scrollIntoView({behavior:"smooth"});
+      } else {
+        link.href = CHECKOUT_URL;
+      }
+    });
+    if (CHECKOUT_URL) link.href = CHECKOUT_URL;
+  });
+</script>
+</body>
+</html>
