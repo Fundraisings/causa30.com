@@ -80,27 +80,128 @@
     .sticky-buy{display:none}
     .note{font-size:.78rem;color:#8c887f;line-height:1.5}
     @media(max-width:800px){
-      .container{width:min(100% - 28px,1180px)}
-      section{padding:72px 0}
-      .hero{min-height:88svh;background-position:62% center}
-      .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.88) 64%,#0b0b0b)}
-      .hero-copy{padding:110px 0 110px;align-self:flex-end}
-      .hero h1{font-size:3.55rem}
-      .split{grid-template-columns:1fr;gap:40px}
-      .split .visual{order:-1}
-      .money-grid,.steps{grid-template-columns:1fr}
-      .products{grid-template-columns:1fr;gap:18px}
-      .product-card{display:grid;grid-template-columns:42% 1fr;gap:16px;align-items:center}
-      .product-card img{height:230px}
-      .product-card h3{font-size:1.4rem;margin-top:0}
-      .gallery{grid-template-columns:1fr 1fr;gap:10px}
-      .gallery img,.gallery img:nth-child(2),.gallery img:nth-child(3){height:250px;border-radius:16px}
-      .gallery img:first-child{grid-column:1/-1;height:390px}
-      .impact-box{padding:28px 22px}
-      .logos{gap:18px}.petlogo{width:100px;height:100px}
-      .sticky-buy{display:block;position:fixed;z-index:50;left:12px;right:12px;bottom:12px}
-      .sticky-buy .btn{width:100%;box-shadow:0 8px 30px rgba(0,0,0,.3)}
-      footer{padding-bottom:90px}
+  .container{width:min(100% - 28px,1180px)}
+  section{padding:58px 0}
+
+  .hero{min-height:88svh;background-position:62% center}
+
+  .hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.88) 64%,#0b0b0b);
+  }
+
+  .hero-copy{padding:90px 0 76px;align-self:flex-end}
+
+  .hero h1{
+    font-size:2.65rem;
+    line-height:1;
+    letter-spacing:-.025em;
+  }
+
+  .hero p{
+    font-size:1rem;
+    line-height:1.55;
+    max-width:100%;
+  }
+
+  .display{
+    font-size:2.65rem;
+    line-height:1.02;
+    letter-spacing:-.025em;
+  }
+
+  .quote{
+    font-size:2.35rem;
+    line-height:1.08;
+  }
+
+  .lead{
+    font-size:1rem;
+    line-height:1.6;
+  }
+
+  .eyebrow{
+    font-size:.66rem;
+    line-height:1.4;
+  }
+
+  .stat{font-size:4.4rem}
+
+  .money-card strong{font-size:2.8rem}
+
+  .impact-placeholder{font-size:3.6rem}
+
+  .btn{
+    font-size:.82rem;
+    line-height:1.25;
+    padding:15px 18px;
+  }
+
+  .split{grid-template-columns:1fr;gap:40px}
+
+  .split .visual{order:-1}
+
+  .money-grid,.steps{grid-template-columns:1fr}
+
+  .products{grid-template-columns:1fr;gap:18px}
+
+  .product-card{
+    display:grid;
+    grid-template-columns:42% 1fr;
+    gap:16px;
+    align-items:center;
+  }
+
+  .product-card img{height:230px}
+
+  .product-card h3{
+    font-size:1.4rem;
+    margin-top:0;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .gallery img,
+  .gallery img:nth-child(2),
+  .gallery img:nth-child(3){
+    height:250px;
+    border-radius:16px;
+  }
+
+  .gallery img:first-child{
+    grid-column:1/-1;
+    height:390px;
+  }
+
+  .impact-box{padding:28px 22px}
+
+  .logos{gap:18px}
+
+  .petlogo{
+    width:100px;
+    height:100px;
+  }
+
+  .sticky-buy{
+    display:block;
+    position:fixed;
+    z-index:50;
+    left:12px;
+    right:12px;
+    bottom:12px;
+  }
+
+  .sticky-buy .btn{
+    width:100%;
+    box-shadow:0 8px 30px rgba(0,0,0,.3);
+  }
+
+  footer{padding-bottom:90px}
     }
   </style>
 </head>
